@@ -1,8 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import './Login.css';
+import '../css/Login.css';
 import {withAuth0} from '@auth0/auth0-react';
+import LoginButton from './LoginButton.js'
 
 class Login extends React.Component {
   render() {
