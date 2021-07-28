@@ -15,9 +15,11 @@ class Profile extends React.Component {
         const config = {
           method: 'get',
           headers: {'Authorization': `Bearer ${jwt}`},
-          baseURL: 'http://localhost:3333',
+          baseURL: 'https://can-of-books-dw.herokuapp.com',
           url: '/auth-test' // Probably going to have to change this
         }
+
+
 
         axios(config)
           .then(results => console.log('came from my /auth-test route on the backend', results))
