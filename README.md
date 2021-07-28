@@ -38,7 +38,7 @@ Conflict Resolution
 # Can of Books
 
 **Author**: Matt Cho, David Whitmore, Tray Chea
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.1 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 
@@ -62,6 +62,8 @@ Conflict Resolution
 
 07-26-2021 5:34pm - Application up and running with authentication through Auth0
 
+07-27-2021 5:45pm - Application has a working Carousel displaying hard coded books from a database.
+
 ## Credit and Collaborations
   - CodeFellows TA's
 
@@ -74,3 +76,14 @@ Start time: 1:30pm
 Finish time: 5:30pm
 
 Actual time needed to complete: 4 hours
+
+
+Name of feature: Set up storage/ Book component
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 1:00pm
+
+Finish time: 5:45pm
+
+Actual time needed to complete: 4:45 hours
