@@ -1,3 +1,26 @@
 .jumbotron{
   margin-bottom: 0;
 }
+
+#favoriteBookPage {
+  background-color: bisque;
+  height: 30vw
+}
+
+.carouselItems{
+  height: 200px;
+  width: 100%;
+}
+
+.carousel-inner{
+  /* height: 500px; */
+}
+
+#bookCard{
+  height: 100%;
+  width: 50%;
+}
+
+#bookCarousel{
+  padding-bottom: 20vw;
+}
