@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios'
+import { withAuth0 } from '@auth0/auth0-react';
 import { Form, Button, Modal } from 'react-bootstrap'
 
 class BookFormModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: "",
+            // email: "",
             name: "",
             author: "",
             genre: "",
@@ -43,7 +44,7 @@ class BookFormModal extends React.Component {
             url: '/books'
         }
         let bookData = {
-            "email": this.state.email,
+            "email": this.props.auth0.user.email,
             "data": {
                 "name": this.state.name,
                 "author": this.state.author,
@@ -68,13 +69,13 @@ class BookFormModal extends React.Component {
                     <Modal.Title>Add A Book to Your Collection</Modal.Title>
                 </Modal.Header>
                 <Form>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    {/* <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" onChange={this.updateEmail} />
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                         </Form.Text>
-                    </Form.Group>
+                    </Form.Group> */}
 
                     <Form.Group className="mb-3">
                         <Form.Label>Book Name</Form.Label>
@@ -107,6 +108,6 @@ class BookFormModal extends React.Component {
 }
 
 
-export default BookFormModal;
+export default withAuth0(BookFormModal);
 
 // type="submit"
