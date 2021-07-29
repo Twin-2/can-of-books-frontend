@@ -38,7 +38,7 @@ Conflict Resolution
 # Can of Books
 
 **Author**: Matt Cho, David Whitmore, Tray Chea
-**Version**: 1.0.1 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.2 
 
 ## Overview
 
@@ -63,6 +63,8 @@ Conflict Resolution
 07-26-2021 5:34pm - Application up and running with authentication through Auth0
 
 07-27-2021 5:45pm - Application has a working Carousel displaying hard coded books from a database.
+
+7-28-2021 8:00pm - Application now has an 'add'book' functionality that will add books to the specific user that is logged in.
 
 ## Credit and Collaborations
   - CodeFellows TA's
