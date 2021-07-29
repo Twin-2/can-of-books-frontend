@@ -89,3 +89,23 @@ Start time: 1:00pm
 Finish time: 5:45pm
 
 Actual time needed to complete: 4:45 hours
+
+Name of feature: Create as a user
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 2:45pm
+
+Finish time:  8pm
+
+Actual time needed to complete: 5:15
+
+Name of feature: Delete books
+
+Estimate of time needed to complete: 2 hours
+
+Start time: Did not get to
+
+Finish time: NA
+
+Actual time needed to complete: NA
