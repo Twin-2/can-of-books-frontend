@@ -55,6 +55,7 @@ class BookFormModal extends React.Component {
         }
         axios.post(`http://localhost:3333/books`, bookData)
             .then(books => {
+                console.log('books')
                 this.props.updateBooks(books.data)
             })
             .catch(err => console.error(err))

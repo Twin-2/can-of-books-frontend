@@ -1,6 +1,8 @@
 import React from 'react';
+import axios from 'axios';
+import { withAuth0 } from '@auth0/auth0-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel, Card } from 'react-bootstrap';
+import { Carousel, Card, Button } from 'react-bootstrap';
 
 
 class BookCarousel extends React.Component {
@@ -13,6 +15,13 @@ class BookCarousel extends React.Component {
     handleSelect = (selectedIndex, e) => {
         this.setState({ index: selectedIndex });
     };
+
+
+    handleDeleteBook = (id) => {
+        axios.delete(`http://localhost:3333/books?id=${id}&email=${this.props.auth0.user.email}`)
+            .then(results => this.props.resetBooks(results.data))
+            .catch(err => console.log(err))
+    }
 
     render() {
         return (
@@ -28,6 +37,10 @@ class BookCarousel extends React.Component {
                                         {value.description}
                                     </Card.Text>
                                 </Card.Body>
+                                <div>
+                                    <Button variant='danger' id="deleteButton" onClick={() => this.handleDeleteBook(value._id)}>Delete Book</Button>
+                                    <Button id='updateBook' > Update Book</Button>
+                                </div>
                             </Card>
                         </Carousel.Item>
                     )}
@@ -40,5 +53,5 @@ class BookCarousel extends React.Component {
 }
 
 
-export default BookCarousel;
+export default withAuth0(BookCarousel);
 

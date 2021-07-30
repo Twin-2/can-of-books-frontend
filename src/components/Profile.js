@@ -17,8 +17,6 @@ class Profile extends React.Component {
             baseURL: 'http://localhost:3333',
             url: '/auth-test' // Probably going to have to change this
           }
-          // https://can-of-books-dw.herokuapp.com
-
 
           axios(config)
             .then(results => console.log('came from my /auth-test route on the backend', results))
