@@ -29,6 +29,9 @@ class MyFavoriteBooks extends React.Component {
   updateBooks = (data) => {
     this.setState({ books: data })
   }
+  resetBooks = (data) => {
+    this.setState({ books: data })
+  }
   showModal = () => {
     this.setState({ showModal: true })
   }
@@ -42,7 +45,7 @@ class MyFavoriteBooks extends React.Component {
       <div id='favoriteBookPage'>
         <h1 >My Favorite Books</h1>
         <button variant='primary' onClick={this.showModal}>Add Book</button>
-        {<BookCarousel books={this.state.books} />}
+        {<BookCarousel books={this.state.books} resetBooks={this.resetBooks} />}
         <Modal show={this.state.showModal} onHide={this.closeModal}><BookFormModal updateBooks={this.updateBooks} closeModal={this.closeModal} /></Modal>
       </div>
     )
