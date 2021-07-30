@@ -66,6 +66,8 @@ Conflict Resolution
 
 7-28-2021 8:00pm - Application now has an 'add'book' functionality that will add books to the specific user that is logged in.
 
+7-29-2021 6:00pm - Application now has a 'delete book' functionality that will delete books from the db of the user.
+
 ## Credit and Collaborations
   - CodeFellows TA's
 
@@ -104,8 +106,8 @@ Name of feature: Delete books
 
 Estimate of time needed to complete: 2 hours
 
-Start time: Did not get to
+Start time: 2:30pm
 
-Finish time: NA
+Finish time: 6:00pm
 
-Actual time needed to complete: NA
+Actual time needed to complete: 3.5 hours
