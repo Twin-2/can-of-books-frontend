@@ -23,6 +23,12 @@ class BookCarousel extends React.Component {
             .catch(err => console.log(err))
     }
 
+    updateBookButton = (idx) => {
+        this.props.showModal();
+        this.props.toggleNewBook();
+        this.props.updateIndex(idx);
+    }
+
     render() {
         return (
             <div>
@@ -31,15 +37,21 @@ class BookCarousel extends React.Component {
                         <Carousel.Item key={idx}>
                             <Card border='dark' id='bookCard'>
                                 <Card.Body>
-                                    <Card.Title>{value.name}</Card.Title>
-                                    <Card.Text>
-                                        By: {value.author}<br />
-                                        {value.description}
-                                    </Card.Text>
+                                    <form>
+                                        <Card.Title>{value.name}</Card.Title>
+                                        <Card.Text>
+                                            <div>
+                                                <p>By: {value.author}</p>
+                                                <p>Genre: {value.genre}</p>
+                                                <p>{value.description} </p>
+                                                <p>Status: {value.status}</p>
+                                            </div>
+                                        </Card.Text>
+                                    </form>
                                 </Card.Body>
                                 <div>
                                     <Button variant='danger' id="deleteButton" onClick={() => this.handleDeleteBook(value._id)}>Delete Book</Button>
-                                    <Button id='updateBook' > Update Book</Button>
+                                    <Button id='updateBook' onClick={() => this.updateBookButton(idx)}> Update Book</Button>
                                 </div>
                             </Card>
                         </Carousel.Item>
