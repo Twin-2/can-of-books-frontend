@@ -13,6 +13,8 @@ class MyFavoriteBooks extends React.Component {
     this.state = {
       books: [],
       showModal: false,
+      newBook: true,
+      bookIndex: -1,
     }
   }
 
@@ -39,14 +41,34 @@ class MyFavoriteBooks extends React.Component {
     this.setState({ showModal: false })
   }
 
+  toggleNewBook = () => {
+    this.setState({ newBook: false })
+  }
+  updateIndex = (idx) => {
+    this.setState({ bookIndex: idx })
+  }
 
   render() {
     return (
       <div id='favoriteBookPage'>
         <h1 >My Favorite Books</h1>
-        <button variant='primary' onClick={this.showModal}>Add Book</button>
-        {<BookCarousel books={this.state.books} resetBooks={this.resetBooks} />}
-        <Modal show={this.state.showModal} onHide={this.closeModal}><BookFormModal updateBooks={this.updateBooks} closeModal={this.closeModal} /></Modal>
+        <button variant='primary' onClick={() => this.setState({ showModal: true, newBook: true, bookIndex: -1 })}>
+          Add Book
+        </button>
+        {<BookCarousel
+          books={this.state.books}
+          resetBooks={this.resetBooks}
+          toggleNewBook={this.toggleNewBook}
+          showModal={this.showModal}
+          updateIndex={this.updateIndex} />}
+        <Modal
+          show={this.state.showModal}
+          onHide={this.closeModal}>
+          <BookFormModal
+            newBook={this.state.newBook}
+            updateBooks={this.updateBooks}
+            closeModal={this.closeModal}
+            book={this.state.books[this.state.bookIndex]} /></Modal>
       </div>
     )
   }
