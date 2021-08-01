@@ -37,8 +37,8 @@ Conflict Resolution
 
 # Can of Books
 
-**Author**: Matt Cho, David Whitmore, Tray Chea
-**Version**: 1.0.2 
+**Author**: David Whitmore
+**Version**: 1.0.3 
 
 ## Overview
 
@@ -67,6 +67,8 @@ Conflict Resolution
 7-28-2021 8:00pm - Application now has an 'add'book' functionality that will add books to the specific user that is logged in.
 
 7-29-2021 6:00pm - Application now has a 'delete book' functionality that will delete books from the db of the user.
+
+8-1-2021 9:45am - Application now has the capacity to update books in your library.
 
 ## Credit and Collaborations
   - CodeFellows TA's
@@ -111,3 +113,13 @@ Start time: 2:30pm
 Finish time: 6:00pm
 
 Actual time needed to complete: 3.5 hours
+
+Name of feature: Update books
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 4:00pm, 8:45am
+
+Finish time: 6:00pm, 9:45am
+
+Actual time needed to complete: 3 hours
